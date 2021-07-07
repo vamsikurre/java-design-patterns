@@ -23,15 +23,17 @@
 
 package com.iluwatar.saga.orchestration;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
+import org.junit.jupiter.api.Test;
 
 /**
- * empty test
+ * Test if the application starts without throwing an exception.
  */
-public class SagaApplicationTest {
+class SagaApplicationTest {
 
   @Test
-  public void mainTest() {
-    SagaApplication.main(new String[]{});
+  void shouldExecuteApplicationWithoutException() {
+    assertDoesNotThrow(() -> SagaApplication.main(new String[]{}));
   }
 }

@@ -23,10 +23,12 @@
 
 package com.iluwatar.object.pool;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 import org.junit.jupiter.api.Test;
 
 /**
- * 
+ *
  * Application test
  *
  */
@@ -34,6 +36,6 @@ class AppTest {
 
   @Test
   void shouldExecuteApplicationWithoutException() {
-    App.main(new String[]{});
+    assertDoesNotThrow(() -> App.main(new String[]{}));
   }
 }
